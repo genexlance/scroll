@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .geometric-pattern {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    mix-blend-mode: multiply;
+    clip-path: polygon(
+      /* Top arrow - pointing down, 40px high */
+      0% 0%,
+      50% 40px,
+      100% 0%,
+      /* Right edge */
+      100% calc(100% - 40px),
+      /* Bottom arrow */
+      100% calc(100% - 40px),
+      50% 100%,
+      0% calc(100% - 40px)
+    );
+  }
+
+  .geometric-pattern-last {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    mix-blend-mode: multiply;
+    clip-path: polygon(
+      /* Top arrow - pointing down, 40px high */
+      0% 0%,
+      50% 40px,
+      100% 0%,
+      /* Straight bottom */
+      100% 100%,
+      0% 100%
+    );
+  }
+}
